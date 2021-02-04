@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="olamundo_list_action">
+      <field name="name">A acción de ola mundo</field>
+      <!-- O que se visualiza na parte superior esquerda -->
+      <field name="res_model">odoo_olamundo.olamundo</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">Tes que crear o primeiro rexistro</p>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="olamundo_form_view">
+      <field name="name">olamundo.form</field>
+      <field name="model">odoo_olamundo.olamundo</field>
+      <field name="arch" type="xml">
+        <form string="Formulario Ola Mundo">
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>
