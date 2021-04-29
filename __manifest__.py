@@ -23,9 +23,9 @@
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
-        'views/menu.xml',
         'views/olamundo.xml',
+        'views/menu.xml',
+        'security/ir.model.access.csv',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
