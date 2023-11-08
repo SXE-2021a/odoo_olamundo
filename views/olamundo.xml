@@ -1,0 +1,66 @@
+<odoo>
+  <data>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="olamundo_list_action">
+      <field name="name">A acción de ola mundo</field>
+      <field name="res_model">odoo_olamundo.olamundo</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">Tes que crear o primeiro rexistro</p>
+      </field>
+    </record>
+
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="olamundo_form_view">
+      <field name="name">olamundo.form</field>
+      <field name="model">odoo_olamundo.olamundo</field>
+      <field name="arch" type="xml">
+        <form string="Formulario de Ola mundo">
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+    <!-- server action to the one above -->
+    <!--
+        <record model="ir.actions.server" id="odoo_olamundo.action_server">
+          <field name="name">odoo_olamundo server</field>
+          <field name="model_id" ref="model_odoo_olamundo_odoo_olamundo"/>
+          <field name="state">code</field>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": model._name,
+            }
+          </field>
+        </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+        <menuitem name="odoo_olamundo" id="odoo_olamundo.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+        <menuitem name="Menu 1" id="odoo_olamundo.menu_1" parent="odoo_olamundo.menu_root"/>
+        <menuitem name="Menu 2" id="odoo_olamundo.menu_2" parent="odoo_olamundo.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+        <menuitem name="List" id="odoo_olamundo.menu_1_list" parent="odoo_olamundo.menu_1"
+                  action="odoo_olamundo.action_window"/>
+        <menuitem name="Server to list" id="odoo_olamundo" parent="odoo_olamundo.menu_2"
+                  action="odoo_olamundo.action_server"/>
+    -->
+  </data>
+</odoo>
